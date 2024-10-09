@@ -23,42 +23,40 @@ To set up the project locally, follow these steps:
 4. **View the Live Website**
    Open your browser and navigate to [localhost:5173](http://localhost:5173/).
 
-## Approach Overview
+## Brief Explanation of Your Approach
 
-1. **API Workflow Understanding**
-   - I began by analyzing the provided APIs using Postman to understand their workflows.
+1. **Project Setup**: I began by setting up a React project using `create-react-app`, and installed the necessary packages, including `axios` for API requests and `tailwindcss` for styling.
 
-2. **UI Design**
-   - After gaining insights into the API functionalities, I designed the user interface utilizing **React.js** and **Tailwind CSS** for a modern look.
+2. **Understanding API Workflows**: I utilized Postman to analyze the provided APIs and understand how to chain them together effectively.
 
-3. **API Integration**
-   - Axios was employed to handle API calls, with each API having its own custom React hook for efficient management.
+3. **UI Development**: The user interface was designed to allow users to select APIs, input required data for POST requests, and visualize the API chaining process. Tailwind CSS was used to ensure a responsive and clean design.
 
-## Assumptions and Decisions Made
+4. **API Chaining Implementation**: 
+   - Initially, I fetched the users' list via a GET request.
+   - Users could then input details to create a new post using the selected `userId` from the previous API call.
+   - Finally, I implemented a GET request to retrieve comments related to the created post.
 
-- Only three specified APIs were provided for this assignment.
+5. **State Management**: React's `useState` was utilized to manage API responses, loading states, and user inputs effectively.
 
-## Expected UI
+## Assumptions or Decisions Made
 
-![Expected UI](./public/1.png)
+- It was assumed that only the specified mock APIs would be utilized for this assignment.
+- The project focuses on functionality rather than aesthetic perfection, ensuring a clean yet functional UI.
 
 ## Completed Features
 
-- **Header Functionality:** The headers are fully operational.
-- **API Sequence:** The API sequence is functioning as intended.
-- **Get Users API:** Successfully implemented and working.
-- **Get Comments API:** Partially implemented.
-- **Post Posts API:** Set up for future functionality.
-- **Expected Results:** Validated results for **Get Users API** and **Get Comments API** (for `postId=1`).
-- **User Interactions:** The UI offers elegant interactions for a smooth user experience.
+- **API Chaining:** Successfully implemented the chaining of multiple API calls.
+- **GET and POST Requests:** Both types of requests were handled correctly, including appropriate state management.
+- **Intuitive UI:** Designed a user-friendly interface that allows for API selection and input.
+- **Loading and Error States:** Implemented indicators for loading and error states to enhance user experience.
+- **Responsive Design:** Ensured the application is responsive across different devices.
 
 ## Known Issues
 
-- **Responsiveness:** The website is currently not responsive across all device sizes.
-- **Post Posts API:** The setup exists, but it is not yet functional.
-- **Get Comments API Limitation:** Currently restricted to work only for `postId = 1`.
-- **API Chaining Modal:** This feature is in the works and needs to be implemented.
+- **Responsiveness:** Although the design is intended to be responsive, further testing may be required to ensure compatibility across all device sizes.
+- **Post API Functionality:** The functionality for the Create Post API is currently set up but needs further testing to ensure reliability.
+- **Comments Retrieval Limitation:** The comments retrieval feature is currently set to only retrieve comments for a specific postId and may require additional implementation for broader functionality.
 
 ## Video Demo Link
 
-- [Demo Video](https://drive.google.com/file/d/1ZGovi3gp35Av0CJRoJbENb_62Szk_mP9/view?usp=sharing)
+- [Demo Video](https://drive.google.com/file/d/1ZGovi3gp35Av0CJRoJbENb_62Szk_mP9/view?usp=drive_link)
